@@ -21,6 +21,8 @@ public class Generator {
     static final String HTML_ROW_MARK = "tr";
     static final String HTML_COLUMN_MARK = "td";
 
+    static final int LAST_EVENT_NUMBER = 4;
+
     public static void main (String[] args) throws IOException {
         List<GeneralResult> globalResults = new ArrayList<>();
 
@@ -30,7 +32,7 @@ public class Generator {
         for (City city : City.values()) {
 
             String generalResultsUrl = String.format(GENERAL_RESULTS_URL, city.getName());
-            String eventResultUrl = String.format(SINGLE_EVENT_RESULT_URL, city.getName(), city.getEventId(4));
+            String eventResultUrl = String.format(SINGLE_EVENT_RESULT_URL, city.getName(), city.getEventId(LAST_EVENT_NUMBER));
 
             Map<Integer, GeneralResult> generalResults = getGeneralResults(generalResultsUrl);
             Collection<GeneralResult> updatedGeneralResults = updateGeneralResultsBySingleResult(generalResults, eventResultUrl);

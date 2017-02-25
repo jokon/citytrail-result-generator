@@ -21,7 +21,7 @@ public class GeneralResult implements Comparable<GeneralResult> {
     public static final Integer COLUMN_NUMBER = 1;
     public static final Integer COLUMN_EVENT_COUNT = 14;
 
-    public static final Integer[] COLUMNS_EVENT_RESULTS = {8,9,10,11,12,13};
+    public static final Integer[] COLUMNS_EVENT_RESULTS = {8,9,10,11};
 
     private Competitor competitor;
     private List<Integer> places;
